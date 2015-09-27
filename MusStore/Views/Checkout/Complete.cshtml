@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Оплата завершена";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Оплата прошла успешно</h2>
+<p>Спасибо за заказ! Номер вашего заказа: <b>5</b></p>
+    <hr />
+<p>
+    <p>Может быть, вы захотите:</p>
+    <p>@Html.ActionLink("Посмотреть свой заказ", "Index", "ShoppingCart")</p>
+    <p>@Html.ActionLink("Узнать адрес пункта самовывоза", "About", "Home")</p>
+    <p>@Html.ActionLink("Вернуться на главную", "Index", "Home")</p> 
+</p>
+

@@ -1,0 +1,59 @@
+﻿    @{
+        ViewBag.Title = "Главная";
+    }
+
+<div style="top: 0px;" class="pane clearfix" id="start-header">
+    <div class="top-wrapper">
+        <div style="opacity: 1;" class="container skrollable skrollable-before" data-100="opacity:1" data-500="opacity: 0;">
+            <div class="row">
+                <div class="col-sm-6 col-md-5 puff pull-right">
+                    <div class="services-wrapper">
+                        <br>
+                        <h1>Добро пожаловать в Орфей, магазин компакт-дисков с музыкой!</h1>
+                        <br>
+                        <p>Совершите полное неожиданных открытий приключение в мир высококачественной FLAC-музыки:</p>
+                        <div class="button-wrapper">
+                            <button type="button" class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-briefcase"></span>@Html.ActionLink("Перейти к каталогу", "Index", "Store")</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-7 bg pull-left">
+                    <div class="image-wrapper fadein">
+                        <img style="display: block;" src="~/Content/Images/Home.jpg" alt="Construct">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="section col-sm-6 col-md-3">
+                <div class="section">
+                    <h3>Богатый ассортимент</h3>
+                    <p>Более <strong>3000</strong> наименований в нашем каталоге.</p>
+                </div>
+            </div>
+            <div class="section col-sm-6 col-md-3">
+                <div class="section">
+                    <h3>Поддержка всех платежных систем</h3>
+                    <p>VISA, QIWI, Яндекс.Деньги, WebMoney, биллинг через операторов мобильной связи - мы принимаем оплату из любого источника.</p>
+                </div>
+            </div>
+
+            <div class="section col-sm-6 col-md-3">
+                <div class="section">
+                    <h3>Широкий охват служб доставки</h3>
+                    <p>Мы сотрудничаем с множеством транспортных компаний, поэтому доставка может быть осуществлена в любой уголок России.</p>
+                </div>
+            </div>
+            <div class="section col-sm-6 col-md-3">
+                <div class="section">
+                    <h3>Низкие цены</h3>
+                    <p>Продаем музыку по оптовым ценам!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

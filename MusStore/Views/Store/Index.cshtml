@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MusStore.Models.Genre>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h3>Каталог</h3>
+<h2>
+    Выберите жанр:
+</h2>
+    @Html.Partial("GenreMenu")
+</div>
+

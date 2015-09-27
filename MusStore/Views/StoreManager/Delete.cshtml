@@ -1,0 +1,66 @@
+﻿@model MusStore.Models.Album
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Удаление</h2>
+
+<h3>Вы действительно хотите удалить этот элемент?</h3>
+<div>
+    <h4>Album</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" />
+            <hr />
+            @Html.ActionLink("Вернуться к таблице", "Index")
+        </div>
+    }
+</div>

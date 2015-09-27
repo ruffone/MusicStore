@@ -1,0 +1,41 @@
+﻿@model MusStore.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="wrapper">
+    <div class="primary-services">
+        <div class="pane" id="start-explanation">
+            <div class="container drop-shadow">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-8 col-md-6">
+                        <h2>Информация о товаре:</h2>
+                        <hr />
+                        <p><b>Исполнитель:</b> @Model.Artist.Name</p>
+                        <p><b>Название:</b> @Model.Title</p>
+                        <p><b>Жанр:</b> @Model.Genre.Name</p>
+                        <p><b>Количество композиций:</b> <span class="badge">@Model.Tracks.Count</span></p>
+                        <p><b>Цена:</b> @Model.Price рублей</p>
+                        <h3>Список песен альбома @Model.Title</h3>
+                        <ol>
+                            @foreach (var track in Model.Tracks)
+                            {
+                                <li><i>@track.Title</i></li>
+                            }
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 col-md-8 col-lg-4 hidden-xs">
+                        <img src="~/Content/Images/defaultmusicCD.jpg" alt="Изображение диска исполнителя" />
+                    </div>
+                </div>
+                <p class="btn btn-success">@Html.ActionLink("Добавить в корзину", "AddToCart", "ShoppingCart", new { id = Model.AlbumId }, "")</p>
+                <hr />
+                <p>Может быть, вы захотите:</p>
+                <p>@Html.ActionLink("Посмотреть свою корзину", "Index", "ShoppingCart")</p>
+                <p><a href="@Model.URL">Зайти на страницу исполнителя в интернете</a></p>
+                <p>@Html.ActionLink("Вернуться в каталог", "Index", "Store")</p>
+            </div>
+        </div>
+    </div>
+</div>

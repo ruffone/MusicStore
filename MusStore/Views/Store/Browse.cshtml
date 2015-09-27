@@ -1,0 +1,21 @@
+﻿@model MusStore.Models.Genre
+@{
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Каталог:<em>@Model.Name</em></h3>
+<div class="container">
+    <div class="row">
+            @foreach (var album in Model.Albums)
+            {
+                <div class="genre col-sm-4 panel panel-wrapper">
+                        <div class="panel-body">
+                            <a href="@Url.Action("Details",new { id = album.AlbumId })">
+                                <img alt="@album.Title" src="~/Content/Images/defaultmusicCD.jpg" />
+                                <span>@album.Title</span>
+                            </a>
+                        </div>
+                    </div>
+            }
+                </div>
+            </div>
